@@ -1,0 +1,350 @@
+/* Teaching Component Styles */
+.teaching {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Hero Section */
+.teaching-hero {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.teaching-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.6);
+  transition: transform 0.5s ease;
+}
+
+.teaching-hero:hover .teaching-hero-image {
+  transform: scale(1.05);
+}
+
+.teaching-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teaching-hero-content {
+  text-align: center;
+  color: #ffffff;
+  padding: 0 20px;
+  max-width: 800px;
+  z-index: 2;
+}
+
+.teaching-hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 4px;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.teaching-hero-subtitle {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Content Section */
+.teaching-content {
+  padding: 3rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Introduction Section */
+.teaching-intro {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background-color: #f0b429;
+  margin: 0 auto 1.5rem;
+}
+
+.teaching-description {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Course Tabs */
+.course-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.course-tab {
+  padding: 0.8rem 1.5rem;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.course-tab:hover {
+  background-color: #e9ecef;
+}
+
+.course-tab.active {
+  background-color: #1e3a8a;
+  color: white;
+  border-color: #1e3a8a;
+}
+
+/* Course Sections */
+.course-section {
+  margin-bottom: 3rem;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.course-section.visible {
+  opacity: 1;
+  height: auto;
+  overflow: visible;
+}
+
+.course-section.hidden {
+  display: none;
+}
+
+/* Courses Grid */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.course {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.course:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.course-header {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-bottom: 3px solid #f0b429;
+}
+
+.course-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.course-content {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.course-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* Teaching Philosophy */
+.teaching-philosophy {
+  margin-top: 4rem;
+  padding: 3rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.philosophy-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.philosophy-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.philosophy-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .teaching-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .teaching-hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .courses-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .teaching-philosophy {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .teaching-hero {
+    height: 35vh;
+  }
+  
+  .teaching-hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .teaching-hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .teaching-content {
+    padding: 2rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .teaching-description {
+    font-size: 1rem;
+  }
+  
+  .course-tabs {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .course-tab {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .course-title {
+    font-size: 1.1rem;
+  }
+  
+  .philosophy-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .teaching-hero {
+    height: 30vh;
+    min-height: 200px;
+  }
+  
+  .teaching-hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .teaching-hero-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .teaching-content {
+    padding: 1.5rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+  }
+  
+  .section-divider {
+    width: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .teaching-description {
+    font-size: 0.95rem;
+  }
+  
+  .course-header {
+    padding: 1.2rem;
+  }
+  
+  .course-content {
+    padding: 1.2rem;
+  }
+  
+  .course-description {
+    font-size: 0.95rem;
+  }
+  
+  .teaching-philosophy {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+} 
